@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="center">User Profile</h2>
+<div class="profile-info">
+    <p><strong>Name:</strong> {{ user.name }}</p>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>Age:</strong> {{ user.age }}</p>
+</div>
+
+<div class="center" style="margin-top:10px;">
+    <a href="{{ url_for('update') }}" class="btn">Update Profile</a>
+    <a href="{{ url_for('register') }}" class="btn" style="background-color:#888;">Register New User</a>
+</div>
+{% endblock %}
